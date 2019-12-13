@@ -8,9 +8,6 @@ Notes: Anything you want to say about your code that will be helpful in the grad
 */
 
 #include <bits/stdc++.h>
-#include <chrono>
-using namespace std::chrono;
-
 using namespace std;
 
 void merge(int arr[], int l, int m, int r) {
@@ -61,10 +58,7 @@ void mergeSort(int arr[], int l, int r) {
     }
 }
 
-
 int main(int argc, char* argv[]){
-    auto start = high_resolution_clock::now();
-
     ifstream inFile(argv[1]);
     ofstream outFile(argv[2]);
     int size;
@@ -91,9 +85,5 @@ int main(int argc, char* argv[]){
             saved=temp;
         outFile<<P[i%limit]<<" ";
     }
-    auto stop = high_resolution_clock::now();
-    auto duration = duration_cast<milliseconds>(stop - start);
-
-    cout << duration.count()<<" milliseconds" << endl;
     return 0;
 }
